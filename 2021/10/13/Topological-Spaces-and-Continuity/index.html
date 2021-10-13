@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#424242">
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
@@ -24,7 +24,7 @@
 <meta property="og:description" content="1. Topological Spaces2. Basis of Topology3. The Metric Topology3. The Subspace topology4. The Disjoint Union Topology5. Continuity and Homeomorphism6. The Product Topology7. The Quotient TopologyExerc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
-<meta property="article:modified_time" content="2021-10-12T23:17:30.805Z">
+<meta property="article:modified_time" content="2021-10-13T07:28:44.072Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -69,7 +69,11 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -195,7 +199,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.1k 字
+      2.3k 字
     </span>
   
 
@@ -246,7 +250,16 @@
 
 <div class="note note-success">
             <p><strong>(Hopf Link)</strong><br>$$L=\{(x,y)\in\mathbb{C}^2\colon\ x^2+y^2=0, |x|^2+|y|^2=1\}$$</p><ol><li>Prove that $L\cong S^1\sqcup S^1$.</li><li>Describe the image of the stereographic projection of $L$. </li></ol>
-          </div>
+          </div>  
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        title
+    </div>
+    <div class='spoiler-content'>
+        <p>For $(x,y)\in L$，we have<br>$$x^2+y^2=0 \implies(y-ix)(y+ix)=0 \implies y=\pm{i}x$$<br>and, we have<br>$$|x|^2+|y|^2=1 \implies |x|=|y|=\frac{\sqrt{2}}{2}$$<br>Let:</p>
+
+    </div>
+</div>
 
 <div class="note note-success">
             <p>If $(X,d)$ is a metric space and $A$ is a non-empty closed set of $X$, prove that $f(x)=\inf_{a\in A}\{d(x,a)\}$ is a continuous function on $X$ and also, $f(x)=0$ if and only if $x\in A$.</p>
@@ -263,7 +276,7 @@
 <div class="note note-success">
             <p><strong>(Zariski Topology)</strong> &ensp; Subset $\mathbb{Z}$ of $\mathbb{C}^n$ is said to be Zariski closed if there exists polynomials $(P_i)_{i\in I}$ in $\mathbb{C}[x_1,x_2,\dots,x_n]$, such that $Z=\{z\in\mathbb{C}^n\colon\ P_i(z)=0, \forall i\in I\}$. If the complement of $U\subseteq \mathbb{C}^n$ is Zariski closed, we say $U$ is Zariski open. Prove the following:</p><ol><li>All Zariski open sets in $\mathbb{C}^n$ forms a topology on $\mathbb{C}^n$, which is called Zariski topology.</li><li>$U_f=\{x\in\mathbb{C}^n\colon f(x)\neq{0}\}$ where $f\in\mathbb{C}[x_1,x_2,\dots,x_n]$, forms a topology basis of Zariski topology on $\mathbb{C}^n$.</li><li>Suppose that $f_1,f_2,\dots,f_m$ are polynomials of $\mathbb{C}[x_1,x_2,\dots,x_n]$. Prove the map:<br>$$(x_1,x_2,\dots,x_n)\mapsto(f_1(x),f_2(x),\dots,f_m(x))$$<br>is continuous if we consider the Zariski topology on both $\mathbb{C}^n$ and $\mathbb{C}^m$.</li></ol>
           </div>
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr>
             <div>
@@ -450,48 +463,6 @@
 
 
 
-
-  
-
-  
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        loader: {
-          load: ['ui/lazy']
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
-
-  
 
 
 
