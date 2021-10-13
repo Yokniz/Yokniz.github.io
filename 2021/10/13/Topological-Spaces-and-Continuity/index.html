@@ -24,7 +24,7 @@
 <meta property="og:description" content="1. Topological Spaces2. Basis of Topology3. The Metric Topology3. The Subspace topology4. The Disjoint Union Topology5. Continuity and Homeomorphism6. The Product Topology7. The Quotient TopologyExerc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
-<meta property="article:modified_time" content="2021-10-13T08:51:36.656Z">
+<meta property="article:modified_time" content="2021-10-13T11:12:43.344Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -199,7 +199,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.8k 字
+      4.1k 字
     </span>
   
 
@@ -208,7 +208,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9 分钟
+      13 分钟
     </span>
   
 
@@ -253,11 +253,15 @@
           </div>  
 <div class='spoiler collapsed'>
     <div class='spoiler-title'>
-        title
+        the solution
     </div>
     <div class='spoiler-content'>
-        <p>For $(x,y)\in L$，we have<br>$$<br>\begin{aligned}<br>x^2+y^2 =0 \implies&amp;(y-ix)(y+ix)=0 \implies y=\pm{i}x \\<br>|x|^2+|y|^2 &amp;=1 \implies |x|=|y|=\frac{\sqrt{2}}{2}<br>\end{aligned}<br>$$</p>
-<p>Let:<br>$$<br>\begin{aligned}<br>U &amp;=\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\} \\<br>V &amp;=\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\}<br>\end{aligned}<br>$$<br>then we have<br>$$L=U\sqcup V$$<br>Therefore, we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.</p>
+        <ol>
+<li><p>For $(x,y)\in L$，we have<br>$$<br>\begin{aligned}<br>&amp;x^2+y^2 =0 \implies(y-ix)(y+ix)=0 \implies y=\pm{i}x \\<br>&amp;|x|^2+|y|^2 =1 \implies |x|=|y|=\frac{\sqrt{2}}{2}<br>\end{aligned}<br>$$<br>Let:<br>$$<br>\begin{aligned}<br>U &amp;=\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\} \\<br>V &amp;=\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\}<br>\end{aligned}<br>$$<br>we have $L=U\sqcup V$ and we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ from $U\to S^1$ and $V\to S^1$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.  </p>
+</li>
+<li><p>Consider the unit 3-sphere $\{(x,y)\in\mathbb{C}^2\colon\ |x|^2+|y|^2=1\}$, the stereographic projection $P$ of the sphere from the point $(0,1)$ maps each point $(x,y)$ differs from $(0,1)$ of the sphere to the point of intersection of the real line joining $(x,y)$ and $(0,1)$ with the 3-space $\{(p,q)\in\mathbb{C}^2\colon\ \operatorname{Re}(q)=0\}$. Expicitly, when $\operatorname{Re}(y)\neq 1$:<br>$$<br>P\colon\quad (x,y)\mapsto (\frac{\operatorname{Re}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(y)}{1-\operatorname{Re}(y)})<br>$$<br>Since for each points $(x,y)\in L$, $\operatorname{Re}(y)\neq 1$, we can find the image for $U$ and $V$ separately from the formula above:<br>$$<br>P(U)=<br>\begin{cases}<br>u=w\\<br>2u^2+(v+1)^2=2<br>\end{cases}\quad<br>P(V)=<br>\begin{cases}<br>u=-w\\<br>2u^2+(v-1)^2=2<br>\end{cases}<br>$$<br>Equivalently:<br>$$<br>P(U)=<br>\begin{cases}<br>u=w\\<br>u^2+(v+1)^2+w^2=2<br>\end{cases}\quad<br>P(V)=<br>\begin{cases}<br>u=-w\\<br>u^2+(v-1)^2+w^2=2<br>\end{cases}<br>$$<br>where $P(U)$ and $P(V)$ are two circles on two intersecting planes respectively (in this case the two planes are perpendicular), and both two centers are located on the line of the intersection of the two planes. Since the distance between centers which is $2$ is less than the sum of radii that is $2\sqrt{2}$, the two circles are going to be linked together, in the sense that neither can be continuously shrunk to a point without pcissing through the other one (see below).</p>
+<iframe src="https://www.geogebra.org/3d/eqrrmxjv?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></li>
+</ol>
 
     </div>
 </div>
