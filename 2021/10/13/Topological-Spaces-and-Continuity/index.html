@@ -24,7 +24,7 @@
 <meta property="og:description" content="1. Topological Spaces2. Basis of Topology3. The Metric Topology3. The Subspace topology4. The Disjoint Union Topology5. Continuity and Homeomorphism6. The Product Topology7. The Quotient TopologyExerc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
-<meta property="article:modified_time" content="2021-10-13T07:28:44.072Z">
+<meta property="article:modified_time" content="2021-10-13T08:51:36.656Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -199,7 +199,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      2.8k 字
     </span>
   
 
@@ -208,7 +208,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7 分钟
+      9 分钟
     </span>
   
 
@@ -256,7 +256,8 @@
         title
     </div>
     <div class='spoiler-content'>
-        <p>For $(x,y)\in L$，we have<br>$$x^2+y^2=0 \implies(y-ix)(y+ix)=0 \implies y=\pm{i}x$$<br>and, we have<br>$$|x|^2+|y|^2=1 \implies |x|=|y|=\frac{\sqrt{2}}{2}$$<br>Let:</p>
+        <p>For $(x,y)\in L$，we have<br>$$<br>\begin{aligned}<br>x^2+y^2 =0 \implies&amp;(y-ix)(y+ix)=0 \implies y=\pm{i}x \\<br>|x|^2+|y|^2 &amp;=1 \implies |x|=|y|=\frac{\sqrt{2}}{2}<br>\end{aligned}<br>$$</p>
+<p>Let:<br>$$<br>\begin{aligned}<br>U &amp;=\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\} \\<br>V &amp;=\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\}<br>\end{aligned}<br>$$<br>then we have<br>$$L=U\sqcup V$$<br>Therefore, we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.</p>
 
     </div>
 </div>
@@ -266,7 +267,7 @@
           </div>
 
 <div class="note note-success">
-            <p>Let $\mathbb{Z}$ denotes the set of integers, $U\subseteq\mathbb{Z}$ is said to be symmetrical if $n\in U$ and $-n\in U$ are equivalent for $\forall n\in \mathbb{Z}$. We define a topology $\tau_{\mathbb{Z}}$ on $\mathbb{Z}$, that the set of $\mathbb{Z}$ is open if it is symmetrical.</p><ol><li>Prove that $\tau_{\mathbb{Z}}$ is actually a topology.</li><li>If $A=\{-1,0,1,2\}\subseteq \mathbb{Z}$, determine $\mathring{A}$, $\bar{A}$ and $A’$.</li><li>Is $A$ an open set on $\mathbb{Z}$? Or is $A$ closed?</li></ol>
+            <p>Let $\mathbb{Z}$ denotes the set of integers, $U\subseteq\mathbb{Z}$ is said to be symmetrical if $n\in U$ and $-n\in U$ are equivalent for $\forall n\in \mathbb{Z}$. We define a topology $\mathcal{T}_{\mathbb{Z}}$ on $\mathbb{Z}$, that the set of $\mathbb{Z}$ is open if it is symmetrical.</p><ol><li>Prove that $\mathcal{T}_{\mathbb{Z}}$ is actually a topology.</li><li>If $A=\{-1,0,1,2\}\subseteq \mathbb{Z}$, determine $\mathring{A}$, $\bar{A}$ and $A’$.</li><li>Is $A$ an open set on $\mathbb{Z}$? Or is $A$ closed?</li></ol>
           </div>
 
 <div class="note note-success">
@@ -463,6 +464,48 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 
