@@ -16,15 +16,15 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <meta name="description" content="1. The Countability Axioms             First-countability. &amp;ensp;A topological space $X$ is said to be first-countable if each point has a countable neighbourhood basis.               A neighborhood b">
+  <meta name="description" content="1. The Countability Axioms             First-countability. &amp;ensp;A topological space is said to be first-countable if each point has a countable neighbourhood basis.               A neighborhood basis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Topological Properties">
 <meta property="og:url" content="http://example.com/2021/10/13/Topological-Properties/index.html">
 <meta property="og:site_name" content="Lacitpiller">
-<meta property="og:description" content="1. The Countability Axioms             First-countability. &amp;ensp;A topological space $X$ is said to be first-countable if each point has a countable neighbourhood basis.               A neighborhood b">
+<meta property="og:description" content="1. The Countability Axioms             First-countability. &amp;ensp;A topological space is said to be first-countable if each point has a countable neighbourhood basis.               A neighborhood basis">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-12T20:38:53.000Z">
-<meta property="article:modified_time" content="2021-10-15T18:39:30.645Z">
+<meta property="article:modified_time" content="2021-10-15T20:16:20.760Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -214,7 +214,7 @@ window.onload = function() {applet.inject('ggbApplet')};
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.7k 字
+      4.1k 字
     </span>
   
 
@@ -223,7 +223,7 @@ window.onload = function() {applet.inject('ggbApplet')};
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8 分钟
+      13 分钟
     </span>
   
 
@@ -256,7 +256,7 @@ window.onload = function() {applet.inject('ggbApplet')};
             
             <div class="markdown-body">
               <h1 id="1-The-Countability-Axioms"><a href="#1-The-Countability-Axioms" class="headerlink" title="1. The Countability Axioms"></a>1. The Countability Axioms</h1><div class="note note-primary">
-            <p><strong>First-countability.</strong> &ensp;<br>A topological space $X$ is said to be first-countable if each point has a countable neighbourhood basis. </p>
+            <p><strong>First-countability.</strong> &ensp;<br>A topological space is said to be first-countable if each point has a countable neighbourhood basis. </p>
           </div>  
 <p>A neighborhood basis of $x\in X$ is a collection $\mathcal{B}$ of neighborhoods of $x$ such that each neighborhood of $x$ contains at least one of the elements of $\mathcal{B}$. In fact, if $x$ has a countable neighborhood basis $\{U_i\}_{i\in\mathbb{N}}$, there must be a nonincreasing sequence $V_1\supset V_2\supset V_3\supset\dots$, such that $\{V_i\}_{i\in\mathbb{N}}$ is also a countable neighborhood basis of $x$, since we can simply let $V_i=\bigcap_{j=1}^i U_j$.</p>
 <div class="note note-warning">
@@ -281,15 +281,28 @@ window.onload = function() {applet.inject('ggbApplet')};
           </div>  
 <p>In fact, if it is, the point $x\in\mathbb{R}$ has a countable neighborhood basis $\{U_i\}_{i\in\mathbb{N}}$, since $(\bigcap_{i=1}^\infty U_i)^{\mathsf{c}}=\bigcup_{i=1}^\infty U_i^{\mathsf{c}}$ which is a countable set, then $\bigcap_{i=1}^\infty U_i\in\mathcal{T}_c$ and consists of infinitely many elements since $\mathbb{R}$ is uncountable, therefore, we choose $y\in\bigcap_{i=1}^\infty U_i$ such that $y\neq x$, then $(\bigcup_{i=1}^\infty U_i)\setminus\{y\}\in\mathcal{T}_c$ and contains no elements of $\{U_i\}_{i\in\mathbb{N}}$, which is a contradiction.</p>
 <div class="note note-primary">
-            <p><strong>Second-countability.</strong> &ensp;<br>A topological space $X$ is said to be second-countable if $X$ has a countable basis for its topology.</p>
+            <p><strong>Second-countability.</strong> &ensp;<br>A topological space is said to be second-countable if there is a countable basis for its topology.</p>
+          </div>  
+
+<div class="note note-primary">
+            <p><strong>Separable.</strong> &ensp;<br>A topological space is said to be separable if it contains a countable, dense subset.</p>
           </div>  
 
 
+<div class="note note-primary">
+            <p><strong>Lindelöf.</strong> &ensp;<br>A topological space is said to be Lindelöf if every open covering for it contains a countable subcovering.</p>
+          </div>  
 
+<div class="note note-warning">
+            <p><strong>Proposition 1.2.</strong> &ensp;</p><ul><li>$X$ is second-countable space $\implies$ $X$ is first-countable space.</li><li>$X$ is second-countable space $\implies$ $X$ is separable space.</li><li>$X$ is second-countable space $\implies$ $X$ is Lindelöf space.</li></ul>
+          </div>  
 
-
-
-
+<p><em>Proof.</em> &ensp;</p>
+<ul>
+<li>Let $\mathcal{B}$ be a countable basis of $X$, then for each point $x\in X$, $\{B\in\mathcal{B}\colon\ x\in B\}$ is a countable neighborhood basis of $x$ since each neighborhood of $x$ is an union of elements of $\mathcal{B}$.</li>
+<li>Let $\mathcal{B}=\{B_i\}_{i\in\mathbb{N}}$ be a countable basis of $X$, $A=\{x_i\in X\colon\ i\in\mathbb{N}, x_i\in B_i\}$ which is a countable set. $\forall x\in X$, each neighborhood $U$ of $x$ contains at least one element $B_N\in\mathcal{B}$, then $x_N\in B_N\subset U \implies U\cap A\neq\varnothing$, therefor $\bar{A}=X$, $X$ is separable.</li>
+<li>Let $\mathcal{B}$ be a countable basis of $X$, $\mathcal{U}$ is an open covering of $X$. We then let $\mathcal{B}’=\{B\in\mathcal{B}\colon\ \exists U\in\mathcal{U}, \mathcal{B}\subset U\}$ and $\mathcal{U}’=\{U_i\in\mathcal{U}\colon\ U_i\subset B_i, B_i\in\mathcal{B}\}$ which are countable. Since $\mathcal{U}$ is an open covering of $X$, for each $x\in X$ there must be a neighborhood $U_x\in\mathcal{U}$ of $x$, such that $x\in U_x$, then there exists $B_x\in\mathcal{B}$ such that $B_x\subset U_x$, which means $B_x\in\mathcal{B}’$ and therefore $U_x\in\mathcal{U}’$, so $\mathcal{U}’$ is a countable subcovering of $\mathcal{U}$ of $X$, $X$ is Lindelöf. <span style='float:right'>$\square$</span></li>
+</ul>
 <h1 id="2-The-Separation-Axioms"><a href="#2-The-Separation-Axioms" class="headerlink" title="2. The Separation Axioms"></a>2. The Separation Axioms</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr>
