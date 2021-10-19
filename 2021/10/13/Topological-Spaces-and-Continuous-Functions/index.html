@@ -24,7 +24,7 @@
 <meta property="og:description" content="1. Topological Spaces             Definition 1.1 &amp;ensp; A topological space is an ordered pair $(X,\mathcal{T})$, where $X$ is a set and $\mathcal{T}$ is a collection of subsets of $X$, satisfying the">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
-<meta property="article:modified_time" content="2021-10-16T19:57:14.590Z">
+<meta property="article:modified_time" content="2021-10-19T17:12:43.449Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -214,7 +214,7 @@ window.onload = function() {applet.inject('ggbApplet')};
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9.3k 字
+      9.7k 字
     </span>
   
 
@@ -223,7 +223,7 @@ window.onload = function() {applet.inject('ggbApplet')};
       <i class="iconfont icon-clock-fill"></i>
       
       
-      29 分钟
+      30 分钟
     </span>
   
 
@@ -256,11 +256,11 @@ window.onload = function() {applet.inject('ggbApplet')};
             
             <div class="markdown-body">
               <h1 id="1-Topological-Spaces"><a href="#1-Topological-Spaces" class="headerlink" title="1. Topological Spaces"></a>1. Topological Spaces</h1><div class="note note-primary">
-            <p><strong>Definition 1.1</strong> &ensp; A <strong>topological space</strong> is an ordered pair $(X,\mathcal{T})$, where $X$ is a set and $\mathcal{T}$ is a collection of subsets of $X$, satisfying the following axims:</p><ul><li>$X$ and $\varnothing$ belong to $\mathcal{T}$.</li><li>Any arbitrary union of elements of $\mathcal{T}$ belongs to $\mathcal{T}$.</li><li>The intersection of any pair of elements of $\mathcal{T}$ belongs to $\mathcal{T}$.</li></ul><p>The elements of $\mathcal{T}$ are called <strong>open sets</strong> and the collection $\mathcal{t}$ is called a <strong>topology</strong> on $X$</p>
+            <p><strong>Definition 1.1</strong> &ensp; A <strong>topological space</strong> is an ordered pair $(X,\mathcal{T})$, where $X$ is a set and $\mathcal{T}$ is a collection of subsets of $X$, satisfying the following axioms:</p><ul><li>$X$ and $\varnothing$ belong to $\mathcal{T}$.</li><li>Any arbitrary union of elements of $\mathcal{T}$ belongs to $\mathcal{T}$.</li><li>The intersection of any pair of elements of $\mathcal{T}$ belongs to $\mathcal{T}$.</li></ul><p>The elements of $\mathcal{T}$ are called <strong>open sets</strong> and the collection $\mathcal{T}$ is called a <strong>topology</strong> on $X$</p>
           </div>  
 
 <div class="note note-info">
-            <p><strong>Example 1.1</strong> &ensp; </p><ul><li>$\{U\colon\ U\subset X\}$ is a topology on $X$, which is called the <strong>discrete topology</strong>. </li><li>$\{X,\varnothing\}$ is also a topology on $X$, which is called the <strong>trivial topology</strong>.</li></ul>
+            <p><strong>Example 1.1</strong> &ensp; </p><ul><li>$2^X$ is a topology on $X$, which is called the <strong>discrete topology</strong>. </li><li>$\{X,\varnothing\}$ is also a topology on $X$, which is called the <strong>trivial topology</strong>.</li></ul>
           </div>  
 
 <div class="note note-info">
@@ -268,36 +268,37 @@ window.onload = function() {applet.inject('ggbApplet')};
           </div> 
 
 <div class="note note-primary">
-            <p><strong>Definition 1.2</strong> &ensp; Suppose $\mathcal{T}$ and $\mathcal{T}’$ are two toopologies on $X$. We say $\mathcal{T}$ is <strong>comparable</strong> with $\mathcal{T}’$ if either $\mathcal{T}\supset\mathcal{T}’$ or $\mathcal{T}\subset\mathcal{T}’$. If $\mathcal{T}\supset\mathcal{T}’$, we say $\mathcal{T}$ is <strong>finier</strong> than $\mathcal{T}’$. If $\mathcal{T}\subset\mathcal{T}’$, we say $\mathcal{T}$ is <strong>coarser</strong> than $\mathcal{T}’$. </p>
+            <p><strong>Definition 1.2</strong> &ensp; Suppose $\mathcal{T}$ and $\mathcal{T}’$ are two topologies on $X$. We say $\mathcal{T}$ is <strong>comparable</strong> with $\mathcal{T}’$ if either $\mathcal{T}\supset\mathcal{T}’$ or $\mathcal{T}\subset\mathcal{T}’$. If $\mathcal{T}\supset\mathcal{T}’$, we say $\mathcal{T}$ is <strong>finier</strong> than $\mathcal{T}’$. If $\mathcal{T}\subset\mathcal{T}’$, we say $\mathcal{T}$ is <strong>coarser</strong> than $\mathcal{T}’$. </p>
           </div>
 
 <h1 id="2-Basis-and-Subbasis"><a href="#2-Basis-and-Subbasis" class="headerlink" title="2. Basis and Subbasis"></a>2. Basis and Subbasis</h1><div class="note note-primary">
-            <p><strong>Definition 2.1</strong> &ensp; A <strong>basis</strong> for a topology on $X$ is a collection of subsets $\mathcal{B}$ of $X$ satifying the following properties:</p><ul><li>For each $x\in X$, there exists $B\in\mathcal{B}$ such that $x\in B$.</li><li>Given $B_1, B_2\in\mathcal{B}$, for each $x\in B_1\cap B_2$, there exists $B_3\in\mathcal{B}$ such that $x\in B_3\subset B_1\cap B_2$.</li></ul>
+            <p><strong>Definition 2.1</strong> &ensp; A <strong>basis</strong> for a topology on $X$ is a collection $\mathcal{B}$ of subsets of $X$ satifying the following properties:</p><ul><li>For each $x\in X$, there exists $B\in\mathcal{B}$ such that $x\in B$.</li><li>Given $B_1, B_2\in\mathcal{B}$, for each $x\in B_1\cap B_2$, there exists $B_3\in\mathcal{B}$ such that $x\in B_3\subset B_1\cap B_2$.</li></ul>
           </div>
 <div class="note note-warning">
-            <p><strong>Proposition 2.1</strong> &ensp; If $\mathcal{B}$ is a basis for a topology on $X$, there is topology $\mathcal{T}$ generated by $\mathcal{B}$, in the sense that $U\in X$ is said to be open if for each $x\in U$, there exists $B\in\mathcal{B}$, such that $x\in B\subset U$.</p>
+            <p><strong>Proposition 2.1</strong> &ensp; If $\mathcal{B}$ is a basis for a topology on $X$, there is topology $\mathcal{T}_\mathcal{B}$ generated by $\mathcal{B}$, in the sense that $U\in X$ is said to be open if for each $x\in U$, there exists $B\in\mathcal{B}$, such that $x\in B\subset U$.</p>
           </div>
 
 <blockquote>
 <p><em>Proof.</em> &ensp; </p>
 <ul>
 <li>It is easy to show that $X$ and $\varnothing$ are elements of $\mathcal{T}$ by the defining condition of openness. </li>
-<li>For an indexed collection $\{U_\alpha\}_{\alpha\in J}$ of elements of $\mathcal{T}$, there exists an index $\alpha$ for each point $x\in \bigcup_{\alpha\in J} U_\alpha$, such that $x\in U_\alpha$. Since $U_\alpha\in\mathcal{T}$, there is an elements $B$ of $\mathcal{B}$ such that $x\in B\subset U_\alpha\subset \bigcup_{\alpha\in J} U_\alpha$ which means $\bigcup_{\alpha\in J} U_\alpha\in\mathcal{T}$.</li>
+<li>For an indexed collection $\{U_\alpha\}_{\alpha\in J}$ of elements of $\mathcal{T}$, there exists an index $\beta$ for each point $x\in \bigcup_{\alpha\in J} U_\alpha$, such that $x\in U_\beta$. Since $U_\beta\in\mathcal{T}$, there is an element $B$ of $\mathcal{B}$ such that $x\in B\subset U_\beta\subset \bigcup_{\alpha\in J} U_\alpha$ which means $\bigcup_{\alpha\in J} U_\alpha\in\mathcal{T}$.</li>
 <li>Given $U_1, U_2\in\mathcal{T}$, for each point $x\in U_1\cap U_2$, there exist $B_1, B_2\in\mathcal{B}$ such that $x\in B_1\subset U_1$, $x\in B_2\subset U_2$. Then, there exists $B_3\in\mathcal{B}$ such that $B_3\subset B_1\cap B_2$, which means $x\in B_3\subset U_1\cap U_2$, therefore $U_1\cap U_2\in\mathcal{T}$. <span style='float:right'>$\square$</span></li>
 </ul>
 </blockquote>
-<p>$\mathcal{T}$ equals the collection of all unions of elements of $\mathcal{B}$, since for each point $x$ of an element $U$ of $\mathcal{T}$, there is an basis element $B_x$ such that  $x\in B_x\subset U$, then $U=\bigcup_{x\in U} B_x$, and the converse is obvious. So we can also generate the topology $\mathcal{T}$ in this particular way. On the other hand, there is a way to obtain the basis for a given topology.</p>
+<span class="label label-warning">$\mathcal{T}_\mathcal{B}$ is the collection of all unions of elements of $\mathcal{B}$</span>, since for each point $x$ of an element $U$ of $\mathcal{T}_\mathcal{B}$, there is an basis element $B_x$ such that  $x\in B_x\subset U$, then $U=\bigcup_{x\in U} B_x$, and the converse is obvious. So we can also generate the topology $\mathcal{T}_\mathcal{B}$ in this particular way. On the other hand, we can also obtain the basis for a given topology, as the following proposition says.
 <div class="note note-warning">
-            <p><strong>Proposition 2.2</strong> &ensp; Let $X$ be a topological space, $\mathcal{C}$ be a collection of subsets of $X$. If each open set $U$ of $X$ contains at least one element $C$ of $\mathcal{C}$ for each $x\in U$, such that $x\in C$, then $\mathcal{C}$ is a basis for the topology on $X$.</p>
+            <p><strong>Proposition 2.2</strong> &ensp; Let $(X,\mathcal{T})$ be a topological space, $\mathcal{C}$ is a collection of open sets of $X$. If $U\in\mathcal{T}$ contains at least one element $C$ of $\mathcal{C}$ for each $x\in U$, such that $x\in C$, then $\mathcal{C}$ is a basis for $\mathcal{T}$.</p>
           </div>
 
 <blockquote>
 <p><em>Proof.</em> &ensp; </p>
 <ul>
 <li>Since $X$ is an open set of itself, for each point $x\in X$ there is an element $C$ of $\mathcal{C}$, such that $x\in C$.</li>
-<li>Given $C_1,C_2\in\mathcal{C}$, since $C_1$ and $C_2$ are open, then $C_1\cap C_2$ is open, which means for each $x\in C_1\cap C_2$, there is an element $C_3$ of $\mathcal{C}$ such that $x\in C_3\subset C_1\cap C_2$. <span style='float:right'>$\square$</span></li>
+<li>Given $C_1,C_2\in\mathcal{C}$, since $C_1$ and $C_2$ are open, then $C_1\cap C_2$ is open, which means for each $x\in C_1\cap C_2$, there is an element $C_3$ of $\mathcal{C}$ such that $x\in C_3\subset C_1\cap C_2$.\<br>Thus $\mathcal{C}$ is a basis for a topology. Since $\mathcal{T}_\mathcal{C}$ is the collection of all unions of elements of $\mathcal{C}$, we have $\mathcal{T}_\mathcal{C}\subset\mathcal{T}$, and the coverse holds guaranteed by how we define the collection $\mathcal{c}$ exactly, therefore, $\mathcal{T}_\mathcal{C}=\mathcal{T}$. <span style='float:right'>$\square$</span></li>
 </ul>
 </blockquote>
+<p>Here are some examples of topologies generated by basis.</p>
 <div class="note note-info">
             <p><strong>Example 2.1</strong> &ensp; </p><ul><li>Let $\mathcal{B}$ be the collection of all open interval $(a,b)$ on $\mathbb{R}$. The topology generated by $\mathcal{B}$ is called a <strong>standard topology</strong> on $\mathbb{R}$.</li><li>Let $\mathcal{B}’$ be the collection of all half-open interval $[a,b)$ on $\mathbb{R}$.The topology generated by $\mathcal{B}’$ is called a <strong>lower limit topology</strong> on $\mathbb{R}$. The corresponding space is denoted by $\mathbb{R}_l$.</li><li>Let $K=\{\frac{1}{n}\colon\ n\in\mathbb{N}\}$, $\mathcal{B}’’$ be the collection of all sets of the form $(a,b)\setminus K$ on $\mathbb{R}$. The topology generated by $\mathcal{B}’’$ is called a <strong>K-topology</strong> on $\mathbb{R}$, The corresponding space is denoted by $\mathbb{R}_K$.</li></ul>
           </div>  
@@ -338,7 +339,7 @@ window.onload = function() {applet.inject('ggbApplet')};
     </div>
     <div class='spoiler-content'>
         <ol>
-<li><p>For $(x,y)\in L$，we have<br>\begin{gather}<br>x^2+y^2 =0 \implies (y-ix)(y+ix)=0 \implies y=\pm{i}x<br>|x|^2+|y|^2 =1 \implies |x|=|y|=\frac{\sqrt{2}}{2}<br>\end{gather}<br>Let:<br>$$<br>U =\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\},\quad<br>V =\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\}<br>$$<br>then $L=U\sqcup V$ and we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ from $U\to S^1$ and $V\to S^1$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.  </p>
+<li><p>For $(x,y)\in L$，we have<br>\begin{gather}<br>x^2+y^2 =0 \implies (y-ix)(y+ix)=0 \implies y=\pm{i}x \\<br>|x|^2+|y|^2 =1 \implies |x|=|y|=\frac{\sqrt{2}}{2}<br>\end{gather}<br>Let:<br>$$<br>U =\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\},\quad<br>V =\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\}<br>$$<br>then $L=U\sqcup V$ and we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ from $U\to S^1$ and $V\to S^1$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.  </p>
 </li>
 <li><p>Consider the unit 3-sphere $\{(x,y)\in\mathbb{C}^2\colon\ |x|^2+|y|^2=1\}$, the stereographic projection $P$ of the sphere from the point $(0,1)$ maps each point $(x,y)$ differs from $(0,1)$ of the sphere to the point of intersection of the real line joining $(x,y)$ and $(0,1)$ with the 3-space $\{(p,q)\in\mathbb{C}^2\colon\ \operatorname{Re}(q)=0\}$. Expicitly, when $\operatorname{Re}(y)\neq 1$:<br>$$<br>P\colon\quad (x,y)\mapsto (\frac{\operatorname{Re}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(y)}{1-\operatorname{Re}(y)})<br>$$<br>Since for each points $(x,y)\in L$, $\operatorname{Re}(y)\neq 1$, we can find the image for $U$ and $V$ separately from the formula above:<br>$$<br>P(U)=<br>\begin{cases}<br>u=w\\<br>2u^2+(v+1)^2=2<br>\end{cases}\quad\quad<br>P(V)=<br>\begin{cases}<br>u=-w\\<br>2u^2+(v-1)^2=2<br>\end{cases}<br>$$<br>Equivalently:<br>$$<br>P(U)=<br>\begin{cases}<br>u=w\\<br>u^2+(v+1)^2+w^2=2<br>\end{cases}\quad\quad<br>P(V)=<br>\begin{cases}<br>u=-w\\<br>u^2+(v-1)^2+w^2=2<br>\end{cases}<br>$$<br>where $P(U)$ and $P(V)$ are two circles on two intersecting planes (in this case the two planes are perpendicular), and both two centers are located on the line of the intersection of the two planes. Consider the radii and the distance between the centers, the two circles are going to be linked together, in the sense that neither can be continuously shrunk to a point without pcissing through the other one (see below).</p>
 <div id="ggbApplet" style='margin:0 auto'></div>  </li>
@@ -360,7 +361,7 @@ window.onload = function() {applet.inject('ggbApplet')};
           </div>
 
 <div class="note note-success">
-            <p><strong>(Zariski Topology)</strong> &ensp; Subset $\mathbb{Z}$ of $\mathbb{C}^n$ is said to be Zariski closed if there exists polynomials $(P_i)_{i\in I}$ in $\mathbb{C}[x_1,x_2,\dots,x_n]$, such that $Z=\{z\in\mathbb{C}^n\colon\ P_i(z)=0, \forall i\in I\}$. If the complement of $U\subseteq \mathbb{C}^n$ is Zariski closed, we say $U$ is Zariski open. Prove the following:</p><ol><li>All Zariski open sets in $\mathbb{C}^n$ forms a topology on $\mathbb{C}^n$, which is called Zariski topology.</li><li>$U_f=\{x\in\mathbb{C}^n\colon f(x)\neq{0}\}$ where $f\in\mathbb{C}[x_1,x_2,\dots,x_n]$, forms a topology basis of Zariski topology on $\mathbb{C}^n$.</li><li>Suppose that $f_1,f_2,\dots,f_m$ are polynomials of $\mathbb{C}[x_1,x_2,\dots,x_n]$. Prove the map:<br>$$(x_1,x_2,\dots,x_n)\mapsto(f_1(x),f_2(x),\dots,f_m(x))$$<br>is continuous if we consider the Zariski topology on both $\mathbb{C}^n$ and $\mathbb{C}^m$.</li></ol>
+            <p><strong>(Zariski Topology)</strong> &ensp; Subset $\mathbb{Z}$ of $\mathbb{C}^n$ is said to be Zariski closed if there exists polynomials $\{P_i\}_{i\in I}$ in $\mathbb{C}[x_1,x_2,\dots,x_n]$, such that $Z=\{z\in\mathbb{C}^n\colon\ P_i(z)=0, \forall i\in I\}$. If the complement of $U\subseteq \mathbb{C}^n$ is Zariski closed, we say $U$ is Zariski open. Prove the following:</p><ol><li>All Zariski open sets in $\mathbb{C}^n$ forms a topology on $\mathbb{C}^n$, which is called Zariski topology.</li><li>$U_f=\{x\in\mathbb{C}^n\colon f(x)\neq{0}\}$ where $f\in\mathbb{C}[x_1,x_2,\dots,x_n]$, forms a topology basis of Zariski topology on $\mathbb{C}^n$.</li><li>Suppose that $f_1,f_2,\dots,f_m$ are polynomials of $\mathbb{C}[x_1,x_2,\dots,x_n]$. Prove the map:<br>$$(x_1,x_2,\dots,x_n)\mapsto(f_1(x),f_2(x),\dots,f_m(x))$$<br>is continuous if we consider the Zariski topology on both $\mathbb{C}^n$ and $\mathbb{C}^m$.</li></ol>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
