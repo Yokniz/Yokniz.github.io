@@ -5,7 +5,22 @@
 
 
 
-<head>
+<head><!-- hexo injector head_begin start -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  loader: {
+    load: ['[custom]/xypic.js'],
+    paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+  },
+  tex: {
+    packages: {'[+]': ['xypic']}
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
   <link rel="icon" href="/img/avatar.png">
@@ -23,10 +38,12 @@
 <meta property="og:site_name" content="Lacitpiller">
 <meta property="og:description" content="1. Topological Spaces             Definition 1.1 &amp;ensp; A topological space is an ordered pair $(X,\mathcal{T})$, where $X$ is a set and $\mathcal{T}$ is a collection of subsets of $X$, satisfying the">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/math/dia-2.jpg">
 <meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
-<meta property="article:modified_time" content="2021-10-19T17:12:43.449Z">
+<meta property="article:modified_time" content="2021-10-24T09:47:20.228Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/math/dia-2.jpg">
   
   <title>Topological Spaces and Continuous Functions - Lacitpiller</title>
 
@@ -214,7 +231,7 @@ window.onload = function() {applet.inject('ggbApplet')};
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9.7k 字
+      12k 字
     </span>
   
 
@@ -223,7 +240,7 @@ window.onload = function() {applet.inject('ggbApplet')};
       <i class="iconfont icon-clock-fill"></i>
       
       
-      30 分钟
+      38 分钟
     </span>
   
 
@@ -281,12 +298,12 @@ window.onload = function() {applet.inject('ggbApplet')};
 <blockquote>
 <p><em>Proof.</em> &ensp; </p>
 <ul>
-<li>It is easy to show that $X$ and $\varnothing$ are elements of $\mathcal{T}$ by the defining condition of openness. </li>
-<li>For an indexed collection $\{U_\alpha\}_{\alpha\in J}$ of elements of $\mathcal{T}$, there exists an index $\beta$ for each point $x\in \bigcup_{\alpha\in J} U_\alpha$, such that $x\in U_\beta$. Since $U_\beta\in\mathcal{T}$, there is an element $B$ of $\mathcal{B}$ such that $x\in B\subset U_\beta\subset \bigcup_{\alpha\in J} U_\alpha$ which means $\bigcup_{\alpha\in J} U_\alpha\in\mathcal{T}$.</li>
-<li>Given $U_1, U_2\in\mathcal{T}$, for each point $x\in U_1\cap U_2$, there exist $B_1, B_2\in\mathcal{B}$ such that $x\in B_1\subset U_1$, $x\in B_2\subset U_2$. Then, there exists $B_3\in\mathcal{B}$ such that $B_3\subset B_1\cap B_2$, which means $x\in B_3\subset U_1\cap U_2$, therefore $U_1\cap U_2\in\mathcal{T}$. <span style='float:right'>$\square$</span></li>
+<li>It is easy to show that $X$ and $\varnothing$ are elements of $\mathcal{T}_\mathcal{B}$ by the defining condition of openness. </li>
+<li>For an indexed collection $\{U_\alpha\}_{\alpha\in J}$ of elements of $\mathcal{T}_\mathcal{B}$, there exists an index $\beta$ for each point $x\in \bigcup_{\alpha\in J} U_\alpha$, such that $x\in U_\beta$. Since $U_\beta\in\mathcal{T}_\mathcal{B}$, there is an element $B$ of $\mathcal{B}$ such that $x\in B\subset U_\beta\subset \bigcup_{\alpha\in J} U_\alpha$ which means $\bigcup_{\alpha\in J} U_\alpha\in\mathcal{T}_\mathcal{B}$.</li>
+<li>Given $U_1, U_2\in\mathcal{T}_\mathcal{B}$, for each point $x\in U_1\cap U_2$, there exist $B_1, B_2\in\mathcal{B}$ such that $x\in B_1\subset U_1$, $x\in B_2\subset U_2$. Then, there exists $B_3\in\mathcal{B}$ such that $B_3\subset B_1\cap B_2$, which means $x\in B_3\subset U_1\cap U_2$, therefore $U_1\cap U_2\in\mathcal{T}_\mathcal{B}$. <span style='float:right'>$\square$</span></li>
 </ul>
 </blockquote>
-<span class="label label-warning">$\mathcal{T}_\mathcal{B}$ is the collection of all unions of elements of $\mathcal{B}$</span>, since for each point $x$ of an element $U$ of $\mathcal{T}_\mathcal{B}$, there is an basis element $B_x$ such that  $x\in B_x\subset U$, then $U=\bigcup_{x\in U} B_x$, and the converse is obvious. So we can also generate the topology $\mathcal{T}_\mathcal{B}$ in this particular way. On the other hand, we can also obtain the basis for a given topology, as the following proposition says.
+<p>Equivalently say, <span class="label label-warning">$\mathcal{T}_\mathcal{B}$ is the collection of all unions of elements of $\mathcal{B}$</span>, since for each point $x$ of an element $U$ of $\mathcal{T}_{\mathcal{B}}$, there is an basis element $B_x$ such that  $x\in B_x\subset U$, then $U=\bigcup_{x\in U} B_x$, and the converse is obvious. So we can also generate the topology $\mathcal{T}_\mathcal{B}$ in this particular way. On the other hand, we can also obtain the basis for a given topology, as the following proposition says.</p>
 <div class="note note-warning">
             <p><strong>Proposition 2.2</strong> &ensp; Let $(X,\mathcal{T})$ be a topological space, $\mathcal{C}$ is a collection of open sets of $X$. If $U\in\mathcal{T}$ contains at least one element $C$ of $\mathcal{C}$ for each $x\in U$, such that $x\in C$, then $\mathcal{C}$ is a basis for $\mathcal{T}$.</p>
           </div>
@@ -322,7 +339,38 @@ window.onload = function() {applet.inject('ggbApplet')};
             <p><strong>Definition 2.2</strong> &ensp; A <strong>subbasis</strong> $\mathcal{S}$ for a topology on $X$ is a collection of subsets of $X$ whose union equals $X$. </p>
           </div>
 <p>One can easily check that all of the finite intersections of elements of $\mathcal{S}$ form a basis for a topology $\mathcal{T}$ on $X$, then $\mathcal{T}$ can be generated by the $\mathcal{S}$ by defining $\mathcal{T}$ as a collection of all the finite intersections of $\mathcal{S}$.</p>
-<h1 id="3-The-Metric-Topology"><a href="#3-The-Metric-Topology" class="headerlink" title="3. The Metric Topology"></a>3. The Metric Topology</h1><h1 id="3-The-Subspace-topology"><a href="#3-The-Subspace-topology" class="headerlink" title="3. The Subspace topology"></a>3. The Subspace topology</h1><h1 id="4-The-Disjoint-Union-Topology"><a href="#4-The-Disjoint-Union-Topology" class="headerlink" title="4. The Disjoint Union Topology"></a>4. The Disjoint Union Topology</h1><h1 id="5-Continuity-and-Homeomorphism"><a href="#5-Continuity-and-Homeomorphism" class="headerlink" title="5. Continuity and Homeomorphism"></a>5. Continuity and Homeomorphism</h1><h1 id="6-The-Product-Topology"><a href="#6-The-Product-Topology" class="headerlink" title="6. The Product Topology"></a>6. The Product Topology</h1><h1 id="7-The-Quotient-Topology"><a href="#7-The-Quotient-Topology" class="headerlink" title="7. The Quotient Topology"></a>7. The Quotient Topology</h1><h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a>Exercises</h1><div class="note note-success">
+<h1 id="3-The-Metric-Topology"><a href="#3-The-Metric-Topology" class="headerlink" title="3. The Metric Topology"></a>3. The Metric Topology</h1><h1 id="3-The-Subspace-topology"><a href="#3-The-Subspace-topology" class="headerlink" title="3. The Subspace topology"></a>3. The Subspace topology</h1><h1 id="4-The-Disjoint-Union-Topology"><a href="#4-The-Disjoint-Union-Topology" class="headerlink" title="4. The Disjoint Union Topology"></a>4. The Disjoint Union Topology</h1><h1 id="5-Continuity-and-Homeomorphism"><a href="#5-Continuity-and-Homeomorphism" class="headerlink" title="5. Continuity and Homeomorphism"></a>5. Continuity and Homeomorphism</h1><h1 id="6-The-Product-Topology"><a href="#6-The-Product-Topology" class="headerlink" title="6. The Product Topology"></a>6. The Product Topology</h1><div class="note note-primary">
+            <p><strong>Definition 6.1</strong> &ensp; The map $\pi_\beta\colon\ \prod X_\alpha\to X_\beta$, where $\pi_\beta((x_\alpha)_{\alpha\in J})= x_\beta$ is called the <strong>projection mapping</strong> associated with the index $\beta$.</p>
+          </div>  
+<div class="note note-primary">
+            <p><strong>Definition 6.2</strong> &ensp; Let $\mathcal{S}$ be the collection of all sets of form $\pi_i^{-1}(U_i)$, where $U_i$ is open in $X_i$. Then $\mathcal{S}$ is a subbasis for a topology, and the topology generated by $\mathcal{S}$ is called the <strong>product topology</strong>.</p>
+          </div>  
+<div class="note note-primary">
+            <p><strong>Definition 6.3</strong> &ensp; Let $\{(X_\alpha,\mathcal{T}_\alpha)\}_{\alpha\in J}$ be an indexed family of topological spaces. The topology on $\prod X_\alpha$ generated by the collection of all sets of the form $\prod U_\alpha$, where $U_\alpha\in\mathcal{T}_\alpha$, is called the <strong>box topology</strong>.</p>
+          </div>  
+
+<h2 id="The-Universal-Property"><a href="#The-Universal-Property" class="headerlink" title="The Universal Property"></a>The Universal Property</h2><div class="note note-danger">
+            <p><strong>Thorem 6.1</strong> &ensp; The topology on $\prod X_\alpha$ is the product topology if and only if for each topological spaces $X$ and each map $f\colon\ X\to\prod X_\alpha$, we have:<br>$$f\ \text{is continuous}\ \iff \forall\alpha\in J,\ f_\alpha\ \text{is continuous}$$</p>
+          </div>  
+<p>The product topology is characterized by the property above, which is called the <strong>universal property</strong> for the product topology.</p>
+<div class="note note-info">
+            <p><strong>Example 6.1</strong> &ensp; The box topology does not satisfy the universal property for the product topolgy. Consider the map $f\colon\ \mathbb{R}\to(\mathbb{R}^\omega, \mathcal{T}_\text{Box}),\ x\mapsto(x,x,\dots)$, let $U=\prod_{n=1}^\infty(-\frac{1}{n},\frac{1}{n})$ which is an open set in $(\mathbb{R}^\omega, \mathcal{T}_\text{Box})$, but the inverse image $f^{-1}(U)=\bigcap_{n=1}^\infty(-\frac{1}{n},\frac{1}{n})=\{0\}$ is closed in $\mathbb{R}$.</p>
+          </div>  
+
+<div class="note note-danger">
+            <p><strong>Thorem 6.2</strong> &ensp; Let $X,Y,Z$ be topological spaces, maps $f\colon Z\to X,\ g\colon\ Z\to Y$ are continuous. There exists a unique continuous map $\phi\colon\ Z\to X\times Y$ induced by $f$ and $g$, such that $\pi_X\circ\phi=f,\ \pi_Y\circ\phi=g$.</p>
+          </div>
+
+
+<div class="note note-danger">
+            <p><strong>Thorem 6.3</strong> &ensp; Let $X,Y,P$ be topological spaces, maps $p_1\colon P\to X,\ p_2\colon\ P\to Y$ are continuous. If for all topological space $Z$ and continuous maps $f\colon Z\to X,\ g\colon\ Z\to Y$, There exists a unique continuous map $\phi\colon\ Z\to X\times Y$, such that $p_1\circ\phi=f,\ p_2\circ\phi=g$, then $P\cong X\times Y$.</p>
+          </div>
+<blockquote>
+<p><em>Proof.</em> &ensp;<br>From arbitrariness, let $Z=X\times Y,\ f=\pi_X,\ g=\pi_Y$, we know that there is a unique continuous map $\phi$. Also,since $p_1$ and $p_2$ are continuous, from the <strong>Theorem 6.2</strong>, we also have a unique continuous map $\psi$, then we have following relationships:<br>$$<br>\begin{aligned}<br>    p_1\circ\phi=\pi_X\\<br>    p_2\circ\phi=\pi_Y<br>\end{aligned}<br>\quad\quad\quad<br>\begin{aligned}<br>    \pi_X\circ\psi=p_1\\<br>    \pi_Y\circ\psi=p_2<br>\end{aligned}<br>$$</p>
+<div align="center"><img src="/img/math/dia-2.jpg" srcset="/img/loading.gif" lazyload width=300 height=270 /></div> 
+
+</blockquote>
+<h1 id="7-The-Quotient-Topology"><a href="#7-The-Quotient-Topology" class="headerlink" title="7. The Quotient Topology"></a>7. The Quotient Topology</h1><h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a>Exercises</h1><div class="note note-success">
             <p>Find a homeomorphism $\varphi:\mathbb{R}^n\to\mathbb{R}^n$ satisfies:  </p><ul><li>$\varphi=1_{\mathbb{R}^n\setminus\mathring{D^n}}$.</li><li>$\varphi(0)=p$, $p\in\mathring{D^n}$.  </li></ul><p>Where $D^n$ denotes the set $\{x\in\mathbb{R}^n\colon\ |x|\leq 1\}$.</p>
           </div>
 
@@ -374,9 +422,9 @@ window.onload = function() {applet.inject('ggbApplet')};
                     
                       <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
                     
-                      <a class="hover-with-bg" href="/categories/Mathematics/Course-notes/">Course notes</a>
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/">Notes</a>
                     
-                      <a class="hover-with-bg" href="/categories/Mathematics/Course-notes/Topology/">Topology</a>
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/Topology/">Topology</a>
                     
                   </div>
                 
@@ -405,7 +453,7 @@ window.onload = function() {applet.inject('ggbApplet')};
                     
                     
                       <a href="/2021/10/13/Topology/">
-                        <span class="hidden-mobile">Topology</span>
+                        <span class="hidden-mobile">Hausdorff Spaces</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

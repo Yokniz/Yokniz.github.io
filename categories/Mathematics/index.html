@@ -5,7 +5,22 @@
 
 
 
-<head>
+<head><!-- hexo injector head_begin start -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  loader: {
+    load: ['[custom]/xypic.js'],
+    paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+  },
+  tex: {
+    packages: {'[+]': ['xypic']}
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
   <link rel="icon" href="/img/avatar.png">
@@ -199,13 +214,25 @@ window.onload = function() {applet.inject('ggbApplet')};
                 
 
 <div class="list-group">
-  <p class="h4">3 posts in total.</p>
+  <p class="h4">5 posts in total.</p>
   <hr>
   
   
     
       
       <p class="h5">2021</p>
+    
+    <a href="/2021/10/26/Compactness/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">Compactness</span>
+      <time style="float: right;">10-26</time>
+    </a>
+  
+    
+    <a href="/2021/10/24/Basic-Category-Theory/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">Basic Category Theory</span>
+      <time style="float: right;">10-24</time>
+    </a>
+  
     
     <a href="/2021/10/13/Topological-Properties/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">Topological Properties</span>
@@ -220,7 +247,7 @@ window.onload = function() {applet.inject('ggbApplet')};
   
     
     <a href="/2021/10/13/Topology/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topology</span>
+      <span class="archive-post-title">Hausdorff Spaces</span>
       <time style="float: right;">10-13</time>
     </a>
   

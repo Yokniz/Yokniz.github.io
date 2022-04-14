@@ -5,7 +5,22 @@
 
 
 
-<head>
+<head><!-- hexo injector head_begin start -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  loader: {
+    load: ['[custom]/xypic.js'],
+    paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+  },
+  tex: {
+    packages: {'[+]': ['xypic']}
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
   <link rel="icon" href="/img/avatar.png">
@@ -16,18 +31,37 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Categories - Course notes">
-<meta property="og:url" content="http://example.com/categories/Mathematics/Course-notes/index.html">
+  <meta name="description" content="CategoriesDefinition of a category             Definition 1. &amp;ensp; A catagory $\boldsymbol{C}$ consists of the following data: a class $ob(\boldsymbol{C})$ of objects.a class $hom(\boldsymbol{C})$ of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Basic Category Theory">
+<meta property="og:url" content="http://example.com/2021/10/24/Basic-Category-Theory/index.html">
 <meta property="og:site_name" content="Lacitpiller">
+<meta property="og:description" content="CategoriesDefinition of a category             Definition 1. &amp;ensp; A catagory $\boldsymbol{C}$ consists of the following data: a class $ob(\boldsymbol{C})$ of objects.a class $hom(\boldsymbol{C})$ of">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-24T09:45:05.000Z">
+<meta property="article:modified_time" content="2022-04-14T07:16:36.315Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
-  <title>Categories - Course notes - Lacitpiller</title>
+  <title>Basic Category Theory - Lacitpiller</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -73,7 +107,7 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -169,14 +203,48 @@ window.onload = function() {applet.inject('ggbApplet')};
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/bg/Violet-Evergarden.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Category - Course notes">
+            <span class="h2" id="subtitle" title="Basic Category Theory">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-24 17:45" pubdate>
+        October 24, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4 分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -189,52 +257,101 @@ window.onload = function() {applet.inject('ggbApplet')};
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">3 posts in total.</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/10/13/Topological-Properties/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topological Properties</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-    
-    <a href="/2021/10/13/Topological-Spaces-and-Continuous-Functions/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topological Spaces and Continuous Functions</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-    
-    <a href="/2021/10/13/Topology/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topology</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-</div>
 
-
-
-
-
-              </div>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Basic Category Theory</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h1><h2 id="Definition-of-a-category"><a href="#Definition-of-a-category" class="headerlink" title="Definition of a category"></a>Definition of a category</h2><div class="note note-primary">
+            <p><strong>Definition 1.</strong> &ensp; A catagory $\boldsymbol{C}$ consists of the following data: </p><ul><li>a class $ob(\boldsymbol{C})$ of <strong>objects</strong>.</li><li>a class $hom(\boldsymbol{C})$ of <strong>morphisms</strong>.</li><li>for each $f\in hom(\boldsymbol{C})$, there is given objects $dom(f)$ and $cod(f)$, called the <strong>domain</strong> and <strong>codomain</strong> of $f$. We write $f\colon\ A\to B$ to indicate that $A=dom(f)$ and $B=cod(f)$.</li><li>given morphisms $f\colon\ A\to B,\ g\colon\ B\to C$, there is given a morphism $g\circ f\colon\ A\to C$, which is called the <strong>composition</strong> of $f$ and $g$.</li><li>for each $A\in ob(\boldsymbol{C})$, there is a morphism $1_A\colon\ A\to A$, called the <strong>identity</strong> morphism of $A$.</li></ul><p>which satisfies the following laws:</p><ul><li><strong>Associativity:</strong><br>$$h\circ(g\circ f)=(h\circ g)\circ f$$<br>for each $f\colon\ A\to B,\ g\colon\ B\to C,\ h\colon\ C\to D$.</li><li><strong>Unit:</strong><br>$$f\circ 1_A=f=1_B\circ f$$<br>for each $f\colon\ A\to B$.</li></ul>
+          </div> 
+<h2 id="Functors"><a href="#Functors" class="headerlink" title="Functors"></a>Functors</h2><div class="note note-primary">
+            <p><strong>Definition 2.</strong> &ensp; A functor $F$ between categories $\boldsymbol{C}$ and $\boldsymbol{D}$ consists of the following data:</p>
+          </div> 
+<h2 id="Isomorphisms"><a href="#Isomorphisms" class="headerlink" title="Isomorphisms"></a>Isomorphisms</h2><div class="note note-primary">
+            <p><strong>Definition 2.</strong> &ensp; A morphism $f\colon\ A\to B$ is called an isomorphism, if there is a morphism $g\colon\ B\to A$, such that<br>$$g\circ f=1_A\quad f\circ g=1_B$$</p>
+          </div> 
+<p>Let $f\colon\ A\to B$ be an isomorphsm, if there are two morphisms $g,g’$ satisfy the property above, we have:<br>$$g=g\circ 1_B=g\circ(f\circ g’)=(g\circ f)\circ g’=1_A\circ g’=g’$$<br>Then $g$ is unique, we call $g$ is the inverse of $f$ and write $g=f^{-1}$. We say $A$ is isomorphic to $B$, written $A\cong B$, if there exists an isomorphism between them.</p>
+<h1 id="Natural-Transformations"><a href="#Natural-Transformations" class="headerlink" title="Natural Transformations"></a>Natural Transformations</h1><h1 id="The-Yoneda-Lemma"><a href="#The-Yoneda-Lemma" class="headerlink" title="The Yoneda Lemma"></a>The Yoneda Lemma</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/">Notes</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/Catgory-Theory/">Catgory Theory</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/10/26/Compactness/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Compactness</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/13/Topological-Properties/">
+                        <span class="hidden-mobile">Topological Properties</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -318,6 +435,19 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
 
 
 
@@ -337,6 +467,48 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 

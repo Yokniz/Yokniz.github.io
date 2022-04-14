@@ -5,7 +5,22 @@
 
 
 
-<head>
+<head><!-- hexo injector head_begin start -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  loader: {
+    load: ['[custom]/xypic.js'],
+    paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+  },
+  tex: {
+    packages: {'[+]': ['xypic']}
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
   <link rel="icon" href="/img/avatar.png">
@@ -16,18 +31,37 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Categories - Topology">
-<meta property="og:url" content="http://example.com/categories/Mathematics/Course-notes/Topology/index.html">
+  <meta name="description" content="Compact, sequentially compact and limit point compact             Definition 1. &amp;ensp; For a topological space $X$:$X$ is said to be compact if each open covering of $X$ has a finite subcovering.$X$ i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Compactness">
+<meta property="og:url" content="http://example.com/2021/10/26/Compactness/index.html">
 <meta property="og:site_name" content="Lacitpiller">
+<meta property="og:description" content="Compact, sequentially compact and limit point compact             Definition 1. &amp;ensp; For a topological space $X$:$X$ is said to be compact if each open covering of $X$ has a finite subcovering.$X$ i">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-26T13:59:38.000Z">
+<meta property="article:modified_time" content="2021-10-26T16:05:50.055Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
-  <title>Categories - Topology - Lacitpiller</title>
+  <title>Compactness - Lacitpiller</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -73,7 +107,7 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -169,14 +203,48 @@ window.onload = function() {applet.inject('ggbApplet')};
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/bg/Violet-Evergarden.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Category - Topology">
+            <span class="h2" id="subtitle" title="Compactness">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-26 21:59" pubdate>
+        October 26, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.9k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12 分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -189,46 +257,171 @@ window.onload = function() {applet.inject('ggbApplet')};
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">2 posts in total.</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/10/13/Topological-Properties/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topological Properties</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-    
-    <a href="/2021/10/13/Topological-Spaces-and-Continuous-Functions/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Topological Spaces and Continuous Functions</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Compactness</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Compact-sequentially-compact-and-limit-point-compact"><a href="#Compact-sequentially-compact-and-limit-point-compact" class="headerlink" title="Compact, sequentially compact and limit point compact"></a>Compact, sequentially compact and limit point compact</h1><div class="note note-primary">
+            <p><strong>Definition 1.</strong> &ensp; For a topological space $X$:</p><ul><li>$X$ is said to be <strong>compact</strong> if each open covering of $X$ has a finite subcovering.</li><li>$X$ is said to be <strong>sequentially compact</strong> if each sequence of points of $X$ has a convergent subsequence converging to a point in $X$.</li><li>$X$ is said to be <strong>limit point compact</strong> if each infinite subset of $X$ has a limit point in $X$.</li></ul>
+          </div>  
 
+<div class="note note-warning">
+            <p><strong>Proposition 1.</strong> &ensp; For a topological space $X$:</p><ol><li>If $X$ is compact, $X$ is limit point compact.</li><li>If $X$ is sequentially compact, $X$ is limit point compact.</li></ol>
+          </div>  
+<blockquote>
+<p><em>Proof.</em> &ensp;</p>
+<ol>
+<li>Let $A$ be an infinite subset of $X$. If $A$ has no limit point, then $A$ is closed in $X$, and for each point $a\in A$, there is an open neighborhood $U_a$ of $a$, such that $U_a\cap A={a}$, then $A^\mathsf{c}\cup\{U_a\}_{a\in A}$ is an open covering of $A$. Since $X$ is compact, we have a finite covering $\{U_{a_1},U_{a_2},\dots,U_{a_n},A^\mathsf{c}\}$ of $X$, then $A=A\cap X=\bigcup_{i=1}^n (A\cap U_{a_i})=\{a_1,a_2,\dots,a_n\}$, which is a finite set. Contradicts.</li>
+<li>Since $A$ is an infinite set, we can find a sequence $\{x_n\}$ of points in $A$, where $x_i\neq x_j$ if $i\neq j$. Since $X$ is sequentially compact, we have a convergent subsequence $\{x_{n_k}\}$, suppose $\lim_{k\to\infty}x_{n_k}= x\in X$, then $x$ is a limit point of $A$ in $X$. <span style='float:right'>$\square$</span></li>
+</ol>
+</blockquote>
+<p>We say that $A\subset X$ is a compact set if the subspace $A$ is a compact space, same for sequentially compact and limit point compact.</p>
+<div class="note note-warning">
+            <p><strong>Proposition 2.</strong> &ensp; $A\subset X$ is a compact set if and only if each open covering of $A$ in $X$ has a finite subcovering.</p>
+          </div>  
 
+<div class="note note-primary">
+            <p><strong>Definition 2.</strong> &ensp; A collection $\mathcal{F}=\{F_\alpha\}$ of subsets of $X$ is said to satisfy the <strong>finite intersection property</strong>, if each finite intersection $\bigcap_{i=1}^n F_{\alpha_i} \neq\varnothing$.</p>
+          </div> 
 
-
-              </div>
-            </div>
+<div class="note note-warning">
+            <p><strong>Proposition 3.</strong> &ensp; A topological space $X$ is compact if and only if for each collection $\mathcal{F}=\{F_\alpha\}$ of subsets of $X$ satisfies the finite intersection property, we have $\bigcap_\alpha U_\alpha\neq\varnothing$.</p>
           </div>
+<div class="note note-secondary">
+            <p><strong>Corollary 1.</strong> &ensp; If $X$ is a compact space, $F_1\supset F_2\supset\dots$ is a non-increasing sequence of non-empty subsets of $x$, then $\bigcap_{i=1}^n F_i\neq\varnothing$.</p>
+          </div>
+
+<div class="note note-warning">
+            <p><strong>Proposition 4.</strong> &ensp; A topological space $X$ is compact if and only if each basis covering of $X$ has a finite subcovering.</p>
+          </div>
+<p>According to the <strong>Alexander subbase theorem</strong>, the term “basis” above can be replaced by “subbasis”.</p>
+<div class="note note-warning">
+            <p><strong>Proposition 5.</strong> &ensp; $X$ and $Y$ are topological spaces, $f\colon\ X\to Y$ is continuous.</p><ul><li>If $A$ is a compact subset of $X$, then $f(A)$ is a compact subset of $Y$.</li><li>If $A$ is a sequentially compact subset of $X$, then $f(A)$ is a sequentially compact subset of $Y$.</li></ul>
+          </div> 
+<p>If $A$ is a limit point compact subset of $X$, the property above may not hold.</p>
+<div class="note note-warning">
+            <p><strong>Proposition 6.</strong> &ensp; Compact subsets of Hausdorff spaces are closed.</p>
+          </div> 
+
+<div class="note note-warning">
+            <p><strong>Proposition 7.</strong> &ensp; Closed subsets of compact spaces are compact.</p>
+          </div> 
+
+<h1 id="The-duality-of-compactness-and-Hausdorff"><a href="#The-duality-of-compactness-and-Hausdorff" class="headerlink" title="The duality of compactness and Hausdorff."></a>The duality of compactness and Hausdorff.</h1><h1 id="The-compact-Hausdorff-spaces"><a href="#The-compact-Hausdorff-spaces" class="headerlink" title="The compact Hausdorff spaces"></a>The compact Hausdorff spaces</h1><div class="note note-success">
+            <p><strong>Lemma 1.</strong> &ensp; If $\mathcal{T}_1\subset\mathcal{T}_2$ are two topologies on $X$, $(X,\mathcal{T}_1)$ is Hausdorff and $(X,\mathcal{T}_2)$ is compact, then $\mathcal{T}_1=\mathcal{T}_2$.</p>
+          </div> 
+
+<div class="note note-warning">
+            <p><strong>Proposition 8.</strong> &ensp; If $(X,\mathcal{T})$ is compact and Hausdorff, $\mathcal{T}_1,\mathcal{T}_2$ are two other topologies satisfy $\mathcal{T}_1\subsetneq\mathcal{T}\subsetneq\mathcal{T}_2$, then $(X,\mathcal{T}_1)$ is not Hausdorff and $(X,\mathcal{T}_2)$ is not compact. (Rigidity)</p>
+          </div> 
+
+<h1 id="Compactness-in-metric-spaces"><a href="#Compactness-in-metric-spaces" class="headerlink" title="Compactness in metric spaces"></a>Compactness in metric spaces</h1><div class="note note-primary">
+            <p><strong>Definition 3.</strong> &ensp; In a metric space, a subset $S$ is said to be bounded if $diam(A)=\sup\{d(x,y)\colon\ x,y\in A\}&lt;+\infty$.</p>
+          </div> 
+
+<div class="note note-warning">
+            <p><strong>Proposition 9.</strong> &ensp; Compact subsets of metric spaces are bounded closed sets.</p>
+          </div> 
+<div class="note note-info">
+            <p><strong>Example 1.</strong> &ensp; A bounded closed set of a metric space may not be compact. Consider the subset $\mathbb{N}\subset (\mathbb{R},d_{\text{discrete}})$ is bounded and closed, but not compact, where $d_{\text{discrete}}$ denote the following metric on $\mathbb{R}$:<br>$$<br>d(x,y)=<br>\begin{cases}<br>    0 &amp;x=y\\<br>    1 &amp;x\neq y<br>\end{cases}<br>$$</p>
+          </div> 
+
+<div class="note note-warning">
+            <p><strong>Proposition 9.</strong> &ensp; In metric spaces, the three kinds of compactness are equivalent.</p>
+          </div> 
+
+<div class="note note-primary">
+            <p><strong>Definition 4.</strong> &ensp; A metric space is said to be <strong>totally bounded</strong> if each of its $\epsilon$-ball coverings has finite subcovering.</p>
+          </div> 
+
+<div class="note note-primary">
+            <p><strong>Definition 5.</strong> &ensp; A metric space is said to be <strong>complete</strong> if each cauchy sequence of points in the space converges.</p>
+          </div> 
+
+<div class="note note-success">
+            <p><strong>Lebesgue’s number lemma.</strong> &ensp; </p>
+          </div> 
+
+<div class="note note-warning">
+            <p><strong>Proposition 10.</strong> &ensp; If $X$ is a metric space, then $X$ is compact if and only if $X$ is totally bounded and complete.</p>
+          </div> 
+
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/">Notes</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/Notes/Topology/">Topology</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/24/Basic-Category-Theory/">
+                        <span class="hidden-mobile">Basic Category Theory</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -312,6 +505,19 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
 
 
 
@@ -331,6 +537,48 @@ window.onload = function() {applet.inject('ggbApplet')};
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 
